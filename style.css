@@ -93,3 +93,17 @@ button:hover {
 .decimal {
   background-color: #f7f7f7;
 }
+.delete-btn {
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+
+  cursor: pointer;
+}
+
+.delete-btn:hover,
+.clear:hover {
+  background-color: darkred;
+}
+
