@@ -12,12 +12,12 @@ let currentOperation = null
 
 function handleDigitClick(digit) {
   if (currentOperation === null) {
-    firstOperand += digit
+    firstOperand += " " + digit
     currentOperandDisplay.textContent = firstOperand
   } else {
-    secondOperand += digit
+    secondOperand += " " + digit
     currentOperandDisplay.textContent =
-      firstOperand + currentOperation + secondOperand
+      firstOperand + " "+ currentOperation + " "+ secondOperand
   }
 }
 
@@ -39,14 +39,14 @@ function handleEqualSignClick() {
   }
   if (Number.isInteger(result)) {
     currentOperandDisplay.textContent = result.toString()
+    firstOperand = result.toString()
   } else {
     currentOperandDisplay.textContent = result.toFixed(4)
+    firstOperand = result.toFixed(4)
   }
-  firstOperand = ""
   secondOperand = ""
   currentOperation = null
 }
-
 function operate(firstOperand, secondOperand, operator) {
   firstOperand = Number(firstOperand)
   secondOperand = Number(secondOperand)
